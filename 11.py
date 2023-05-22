@@ -36,3 +36,4 @@ class Cone:
     def get_surf(self):
         return math.pi * self.r ** 2 + math.pi * self.r * self.h
 est
+dfs
