@@ -20,20 +20,51 @@
 # --------------------------
 
 # 원뿔 클래스 정의
-import math
+# import math
 
-print(math.pi)
+# print(math.pi)
 
 
-class Cone:
-    def __init__(self, radius=20, height=30):
-        self.r = radius
-        self.h = height
+# class Cone:
+#     def __init__(self, radius=20, height=30):
+#         self.r = radius
+#         self.h = height
 
-    def get_vol(self):
-        return 1/3 * math.pi * self.r ** 2 * self.h
+#     def get_vol(self):
+#         return 1/3 * math.pi * self.r ** 2 * self.h
 
-    def get_surf(self):
-        return math.pi * self.r ** 2 + math.pi * self.r * self.h
-est
-dfs
+#     def get_surf(self):
+#         return math.pi * self.r ** 2 + math.pi * self.r * self.h
+# ----------------------
+
+#두 변의 길이 a,b와 끼인각 a인 삼각형의 넓이를 구하는 프로그램을 작성
+# import math
+# from math import sin
+
+# a,b = 10, 20
+
+# area = 1/2*a*b*math.sin(math.radians(60))
+
+# print(area)
+
+#1~45 숫자 6개를 입력 받아 당첨 숫자와 비교하는 프로그램 작성
+import random
+
+guess_str = input("1~45 번호 6개를 쉽표로 분리하여 입력하세요 : ").split(", ")
+guess_list = list()
+
+for i in guess_str:
+    guess_list.append(int(i))
+
+
+lotto_list = random.sample(range(1, 46), 6)
+print("예상 번호는" + guess_list + "입니다.")
+print("추첨 번호는" + lotto_list + "입니다.")
+
+hit_count = 0
+
+for guess in guess_list:
+    if guess in lotto_list:
+        hit_count = hit_count + 1
+
+print("축하합니다" + str(hit_count)+ "개 맞혔습니다.")
